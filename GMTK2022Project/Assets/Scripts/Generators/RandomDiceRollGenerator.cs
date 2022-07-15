@@ -6,12 +6,16 @@ using TMPro;
 public class RandomDiceRollGenerator : MonoBehaviour
 {
     [SerializeField]
-    public TextMeshProUGUI numberDisplay;
+    public List<GameObject> numberFaceDisplays;
+    public Vector3 posn;
     public int numOfRolls;
     public float waitTime;
-    public int tar;
-    public int min;
-    public int max;
+    public int tarRollValue;
+    public int minRollValue;
+    public int maxRollValue;
+
+    private GameObject tempFaceDisplay;
+
 
     // Start is called before the first frame update
     void Start()
@@ -31,11 +35,14 @@ public class RandomDiceRollGenerator : MonoBehaviour
 
     IEnumerator WaitBeforeFlash() {
         for (int i = 0; i < numOfRolls; i++) {
-            int tempTar = Random.Range(min, max);
-            Debug.Log(tempTar);
-            numberDisplay.text = tempTar.ToString();
+            int tempTar = Random.Range(minRollValue, maxRollValue + 1);
+            if (tempFaceDisplay != null) {
+                Destroy(tempFaceDisplay);
+            }
+            tempFaceDisplay = Instantiate(numberFaceDisplays[tempTar - minRollValue], posn, transform.rotation);
             yield return new WaitForSecondsRealtime(waitTime);
         }
-        numberDisplay.text = tar.ToString();
+        Destroy(tempFaceDisplay);
+        tempFaceDisplay = Instantiate(numberFaceDisplays[tarRollValue - minRollValue], posn, transform.rotation);
     }
 }
