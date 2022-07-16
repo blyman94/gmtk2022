@@ -35,9 +35,9 @@ public class RandomDiceRollGenerator : MonoBehaviour
     IEnumerator WaitBeforeFlash() {
         for (int i = 0; i < numOfRolls; i++) {
             int tempTar = Random.Range(minRollValue, maxRollValue + 1);
-            faceNumber.GetComponent<Image>().sprite = faceNumberSprites[tempTar - minRollValue];
+            faceNumber.GetComponent<Image>().sprite = faceNumberSprites[tempTar - 1];
             yield return new WaitForSecondsRealtime(waitTime);
         }
-        faceNumber.GetComponent<Image>().sprite = faceNumberSprites[tarRollValue - minRollValue];
+        faceNumber.GetComponent<Image>().sprite = faceNumberSprites[tarRollValue - 1];
     }
 }
