@@ -92,6 +92,12 @@ public class CareProviderDisplay : MonoBehaviour, IDragHandler, IBeginDragHandle
         UpdateDisplay();
     }
 
+    public void ClearFromPatient()
+    {
+        AssignedToPatient = false;
+        UpdateDisplay();
+    }
+
     public void OnDrag(PointerEventData eventData)
     {
         transform.position = eventData.position;
@@ -120,9 +126,10 @@ public class CareProviderDisplay : MonoBehaviour, IDragHandler, IBeginDragHandle
         {
             foreach (var go in raycastResults)
             {
+                // TODO: Signal the player the doctor cannot be assigned because with patient.
                 BreakroomDisplay breakroomDisplay =
                     go.gameObject.GetComponent<BreakroomDisplay>();
-                if (breakroomDisplay != null)
+                if (breakroomDisplay != null && !AssignedToPatient)
                 {
                     int breakroomDisplayIndex = breakroomDisplay.index;
                     breakroomProvider.AddAtIndexUnique(currentProvider.Value,
@@ -130,6 +137,20 @@ public class CareProviderDisplay : MonoBehaviour, IDragHandler, IBeginDragHandle
                     AssignedToBreakroom = true;
                     UpdateDisplay();
                     break;
+                }
+
+                PatientListItemObserver patientObserver =
+                    go.gameObject.GetComponent<PatientListItemObserver>();
+                if (patientObserver != null && !AssignedToBreakroom)
+                {
+                    // TODO: Signal the player the doctor cannot be assigned because in breakroom.
+                    bool success = patientObserver.TryAddProvider(currentProvider.Value);
+                    if (success)
+                    {
+                        AssignedToPatient = true;
+                        UpdateDisplay();
+                        break;
+                    }
                 }
             }
             currentProvider.Value = null;

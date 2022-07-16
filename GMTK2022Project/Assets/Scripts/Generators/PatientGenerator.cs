@@ -4,10 +4,11 @@ using UnityEngine;
 
 public class PatientGenerator : MonoBehaviour
 {
-    [SerializeField] IntVariable patientCount;
-    [SerializeField] List<Injury> allInjuries;
-    [SerializeField] List<PatientRank> allRanks;
-    [SerializeField] PatientListVariable daysPatients;
+    [SerializeField] private IntVariable patientCount;
+    [SerializeField] private List<Injury> allInjuries;
+    [SerializeField] private List<PatientRank> allRanks;
+    [SerializeField] private PatientListVariable daysPatients;
+    [SerializeField] private CareProvider nullProvider;
 
     private List<Patient> patientListToStore;
 
@@ -17,7 +18,10 @@ public class PatientGenerator : MonoBehaviour
         for (int i = 0; i < patientCount.Value; i++)
         {
             Patient patient = new Patient("Patient_" + i.ToString(), 
-            GenerateRandomBackground(), allInjuries[Random.Range(0, allInjuries.Count)]);
+                GenerateRandomBackground(), 
+                allInjuries[Random.Range(0, allInjuries.Count)]);
+            patient.AssignedProviders.Add(nullProvider);
+            patient.AssignedProviders.Add(nullProvider);
             patientListToStore.Add(patient);
         }
         daysPatients.Value = patientListToStore;

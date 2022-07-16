@@ -2,13 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BreakroomDisplay : MonoBehaviour
 {
-
-    private CareProvider provider;
-
+    [SerializeField] private CareProvider provider;
     [SerializeField] private TextMeshProUGUI providerName;
+    [SerializeField] private Image breakroomImage;
 
     public CareProvider Provider
     {
@@ -32,14 +32,8 @@ public class BreakroomDisplay : MonoBehaviour
 
     private void UpdateDisplay()
     {
-        if (provider != null)
-        {
-            providerName.text = provider.Name;
-        }
-        else
-        {
-            providerName.text = "EMPTY";
-        }
+        providerName.text = provider.Name;
+        breakroomImage.color = provider.indicatorColor;
     }
 
 }
