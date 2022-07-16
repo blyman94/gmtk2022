@@ -1,1 +1,0 @@
-public enum InjurySeverity {Low, Medium, High, Critical}
