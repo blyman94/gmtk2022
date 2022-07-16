@@ -2,17 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CareProvider : MonoBehaviour
+[CreateAssetMenu(menuName = "Care Provider")]
+public class CareProvider : ScriptableObject
 {
-    // Start is called before the first frame update
-    void Start()
+    public string Name;
+    public Color indicatorColor = Color.white;
+    public CareProviderRole Role;
+    public int CurrentMorale { get; set; }
+
+    public int MoraleChangeFromBreakroom = 0;
+    public int MoraleChangeFromPatientOutcome = 0;
+    public int MoraleChangeFromGlobalEvent = 0;
+
+    public int GetDiceThrow()
     {
-        
+        return Random.Range(CurrentMorale, Role.MaxDiceValue + 1);
     }
 
-    // Update is called once per frame
-    void Update()
+    public void UpdateCurrentMorale()
     {
-        
+        int totalMoraleDelta = MoraleChangeFromBreakroom + 
+            MoraleChangeFromPatientOutcome + MoraleChangeFromGlobalEvent;
+        CurrentMorale = 
+            Mathf.Clamp(CurrentMorale + totalMoraleDelta, 1, Role.MaxMorale);
+
+        // Reset morale changes
+        MoraleChangeFromBreakroom = 0;
+        MoraleChangeFromPatientOutcome = 0;
+        MoraleChangeFromGlobalEvent = 0;
     }
 }

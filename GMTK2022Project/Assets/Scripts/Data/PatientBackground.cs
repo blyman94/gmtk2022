@@ -2,17 +2,22 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PatientBackground : ScriptableObject
+[System.Serializable]
+public class PatientBackground
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public PatientRank Rank;
+    public bool IsMarried;
+    public int ChildCount;
+    public int Age;
+    public int DaysUntilDischarge;
 
-    // Update is called once per frame
-    void Update()
+    public PatientBackground(PatientRank rank, bool isMarried, int childCount, 
+        int age, int daysUntilDischarge)
     {
-        
+        Rank = rank;
+        IsMarried = isMarried;
+        ChildCount = childCount;
+        Age = age;
+        DaysUntilDischarge = daysUntilDischarge;
     }
 }
