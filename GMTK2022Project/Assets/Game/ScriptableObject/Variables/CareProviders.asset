@@ -9,10 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d74385a36075bd41840ae1a516e3d12, type: 3}
-  m_Name: PatientC
+  m_Script: {fileID: 11500000, guid: 2c0dd9e266fdaae45b4ce108031898ed, type: 3}
+  m_Name: CareProviders
   m_EditorClassIdentifier: 
-  Injury: {fileID: 11400000, guid: bc66d5906403a8f49b5fd6603e64e7d0, type: 2}
-  AssignedProviders:
+  value:
   - {fileID: 11400000, guid: 1f3a09cec7a062a438d60d6916f8c5ec, type: 2}
-  PotentialMoraleDelta: 3
+  - {fileID: 11400000, guid: 54094b85475575c4ab1d1aa5e279b595, type: 2}
+  - {fileID: 11400000, guid: 84bdd07ba70c495469dceec657c1e6f4, type: 2}
+  - {fileID: 11400000, guid: 55761ae59feb841418df1c0ad45ff6ee, type: 2}

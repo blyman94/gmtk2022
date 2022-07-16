@@ -25,5 +25,10 @@ public class CareProvider : ScriptableObject
             MoraleChangeFromPatientOutcome + MoraleChangeFromGlobalEvent;
         CurrentMorale = 
             Mathf.Clamp(CurrentMorale + totalMoraleDelta, 1, Role.MaxMorale);
+
+        // Reset morale changes
+        MoraleChangeFromBreakroom = 0;
+        MoraleChangeFromPatientOutcome = 0;
+        MoraleChangeFromGlobalEvent = 0;
     }
 }

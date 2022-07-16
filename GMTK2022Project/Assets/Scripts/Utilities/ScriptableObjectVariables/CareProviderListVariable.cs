@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [CreateAssetMenu]
-public class PatientListVariable : ScriptableObject
+public class CareProviderListVariable : ScriptableObject
 {
     public VariableUpdated ValueUpdated;
 
-    [SerializeField] private List<Patient> value;
+    [SerializeField] private List<CareProvider> value;
 
-    public List<Patient> Value
+    public List<CareProvider> Value
     {
         get
         {

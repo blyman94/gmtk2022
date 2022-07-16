@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: DoctorA
   m_EditorClassIdentifier: 
   Name: Doctor A
-  indicatorColor: {r: 1, g: 1, b: 1, a: 1}
+  indicatorColor: {r: 1, g: 0, b: 0, a: 1}
   Role: {fileID: 11400000, guid: de2c9e29de933d24f9b56aa7399cc0b7, type: 2}
   MoraleChangeFromBreakroom: 0
-  MoraleChangeFromPatientOutcome: -3
+  MoraleChangeFromPatientOutcome: 0
   MoraleChangeFromGlobalEvent: 0

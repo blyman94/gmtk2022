@@ -2,12 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Patient")]
-public class Patient : ScriptableObject
+[System.Serializable]
+public class Patient
 {
+    public string Name;
     public Injury Injury;
-    public List<CareProvider> AssignedProviders;
+    public List<CareProvider> AssignedProviders { get; set; }
     public int PotentialMoraleDelta = 0;
+
+    public Patient(string name, Injury injury)
+    {
+        AssignedProviders = new List<CareProvider>();
+        Name = name;
+        Injury = injury;
+    }
 
     public int GetDiceThrow()
     {

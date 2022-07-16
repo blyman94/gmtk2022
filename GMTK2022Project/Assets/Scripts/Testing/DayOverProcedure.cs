@@ -4,20 +4,13 @@ using UnityEngine;
 
 public class DayOverProcedure : MonoBehaviour
 {
-    [SerializeField] private List<Patient> dayPatients;
-    [SerializeField] private List<CareProvider> careProviders;
+    [SerializeField] private PatientListVariable dayPatients;
+    [SerializeField] private CareProviderListVariable careProviders;
     [SerializeField] private IntVariable patientDeathCount;
 
-    private void Start()
+    public void PhaseOne()
     {
-        PhaseOne();
-        PhaseTwo();
-        PhaseThree();
-    }
-
-    private void PhaseOne()
-    {
-        foreach (Patient patient in dayPatients)
+        foreach (Patient patient in dayPatients.Value)
         {
             patient.GetSurvivalData(out int naturalThrow,
                 out List<int> providerThrows, out int survivalThreshold,
@@ -28,7 +21,7 @@ public class DayOverProcedure : MonoBehaviour
                 patientDeathCount.Value += 1;
             }
 
-            string toPrintString = patient.name + ":\n";
+            string toPrintString = patient.Name + ":\n";
             toPrintString += string.Format("    NaturalThrow: {0}\n", naturalThrow);
             for (int i = 0; i < providerThrows.Count; i++)
             {
@@ -41,10 +34,10 @@ public class DayOverProcedure : MonoBehaviour
         }
     }
 
-    private void PhaseTwo()
+    public void PhaseTwo()
     {
         string toPrintString = "Provider Morale Changes:\n";
-        foreach (CareProvider careProvider in careProviders)
+        foreach (CareProvider careProvider in careProviders.Value)
         {
             toPrintString += "    Name: " + careProvider.Name + "\n";
             toPrintString += "        Prev Morale: " + careProvider.CurrentMorale + "\n";
@@ -55,7 +48,7 @@ public class DayOverProcedure : MonoBehaviour
         toPrintString = "";
     }
 
-    private void PhaseThree()
+    public void PhaseThree()
     {
 
     }

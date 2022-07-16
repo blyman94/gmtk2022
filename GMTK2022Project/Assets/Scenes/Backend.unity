@@ -134,7 +134,7 @@ GameObject:
   - component: {fileID: 48180780}
   - component: {fileID: 48180779}
   m_Layer: 0
-  m_Name: CareProviderStartUp
+  m_Name: GameStartup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -157,6 +157,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 54094b85475575c4ab1d1aa5e279b595, type: 2}
   - {fileID: 11400000, guid: 84bdd07ba70c495469dceec657c1e6f4, type: 2}
   - {fileID: 11400000, guid: 55761ae59feb841418df1c0ad45ff6ee, type: 2}
+  PatientDeathCount: {fileID: 11400000, guid: 1c4ef80204546014d905a4e1c8430f9b, type: 2}
 --- !u!4 &48180780
 Transform:
   m_ObjectHideFlags: 0
@@ -170,8 +171,82 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &64656970
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 64656972}
+  - component: {fileID: 64656971}
+  - component: {fileID: 64656973}
+  m_Layer: 0
+  m_Name: BreakRoomHandler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &64656971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64656970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9a4ee2a994a3e541a0f5009677d7eda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  breakRoomProviders: {fileID: 11400000, guid: 5007706e2e43a594db29d02ef8109624, type: 2}
+--- !u!4 &64656972
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64656970}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 521.9797, y: 232.03918, z: 0.41654313}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &64656973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 64656970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbc72ecd1b5ddd7499bcb583bd5da74b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 4b41a919893913b4a96db7533d28129a, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 64656971}
+        m_TargetAssemblyTypeName: BreakroomHandler, Assembly-CSharp
+        m_MethodName: UpdateProviderMorale
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &257520996
 GameObject:
   m_ObjectHideFlags: 0
@@ -266,6 +341,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1206002575}
   - component: {fileID: 1206002574}
+  - component: {fileID: 1206002577}
+  - component: {fileID: 1206002576}
   m_Layer: 0
   m_Name: DayOverProcedure
   m_TagString: Untagged
@@ -285,15 +362,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1cfc5774debc9ea4ea5da4045af32ade, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dayPatients:
-  - {fileID: 11400000, guid: 6622defeb567cf844895d26e701bf49c, type: 2}
-  - {fileID: 11400000, guid: 1ea3facc33d9bc9459691bf7afb57032, type: 2}
-  - {fileID: 11400000, guid: cd7ed338ba359ec4cba7ba434a7a3288, type: 2}
-  careProviders:
-  - {fileID: 11400000, guid: 1f3a09cec7a062a438d60d6916f8c5ec, type: 2}
-  - {fileID: 11400000, guid: 54094b85475575c4ab1d1aa5e279b595, type: 2}
-  - {fileID: 11400000, guid: 84bdd07ba70c495469dceec657c1e6f4, type: 2}
-  - {fileID: 11400000, guid: 55761ae59feb841418df1c0ad45ff6ee, type: 2}
+  dayPatients: {fileID: 11400000, guid: 0c7839aaf12a0cf4f9ae180e25051ebc, type: 2}
+  careProviders: {fileID: 11400000, guid: 9929c14cb00af644da9fd5084b5d2a9c, type: 2}
+  patientDeathCount: {fileID: 11400000, guid: 1c4ef80204546014d905a4e1c8430f9b, type: 2}
 --- !u!4 &1206002575
 Transform:
   m_ObjectHideFlags: 0
@@ -301,6 +372,141 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1206002573}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 521.9797, y: 232.03918, z: 0.41654313}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1206002576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206002573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbc72ecd1b5ddd7499bcb583bd5da74b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: ac6ef8b8db1b4df4d9385b1a88ea0f79, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1206002574}
+        m_TargetAssemblyTypeName: DayOverProcedure, Assembly-CSharp
+        m_MethodName: PhaseTwo
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1206002577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206002573}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbc72ecd1b5ddd7499bcb583bd5da74b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 4b41a919893913b4a96db7533d28129a, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1206002574}
+        m_TargetAssemblyTypeName: DayOverProcedure, Assembly-CSharp
+        m_MethodName: PhaseOne
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &1608496080
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1608496083}
+  - component: {fileID: 1608496082}
+  - component: {fileID: 1608496081}
+  m_Layer: 0
+  m_Name: PatientGenerator
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1608496081
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608496080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbc72ecd1b5ddd7499bcb583bd5da74b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 4ec7c1d3f71ab65448b5885618ca463a, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1608496082}
+        m_TargetAssemblyTypeName: PatientGenerator, Assembly-CSharp
+        m_MethodName: GeneratePatients
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1608496082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608496080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d556e8f801158ab46b6152a27a9fee6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  patientCount: {fileID: 11400000, guid: 760751d18830ce04cb4e2a6293534873, type: 2}
+  allInjuries:
+  - {fileID: 11400000, guid: d02ea32315d921141aa5a0b9f2252ad6, type: 2}
+  - {fileID: 11400000, guid: 5c91198a994a7a94db91b1b9049d4ad1, type: 2}
+  - {fileID: 11400000, guid: bc66d5906403a8f49b5fd6603e64e7d0, type: 2}
+  daysPatients: {fileID: 11400000, guid: 0c7839aaf12a0cf4f9ae180e25051ebc, type: 2}
+--- !u!4 &1608496083
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608496080}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 521.9797, y: 232.03918, z: 0.41654313}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -338,7 +544,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1735431515
 GameObject:
