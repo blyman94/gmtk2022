@@ -1,20 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 public class RandomDiceRollGenerator : MonoBehaviour
 {
     [SerializeField]
-    public List<GameObject> numberFaceDisplays;
-    public Vector3 posn;
+    public List<Sprite> faceNumberSprites;
     public int numOfRolls;
     public float waitTime;
     public int tarRollValue;
     public int minRollValue;
     public int maxRollValue;
 
-    private GameObject tempFaceDisplay;
+    public GameObject faceNumber;
 
 
     // Start is called before the first frame update
@@ -36,13 +35,9 @@ public class RandomDiceRollGenerator : MonoBehaviour
     IEnumerator WaitBeforeFlash() {
         for (int i = 0; i < numOfRolls; i++) {
             int tempTar = Random.Range(minRollValue, maxRollValue + 1);
-            if (tempFaceDisplay != null) {
-                Destroy(tempFaceDisplay);
-            }
-            tempFaceDisplay = Instantiate(numberFaceDisplays[tempTar - minRollValue], posn, transform.rotation);
+            faceNumber.GetComponent<Image>().sprite = faceNumberSprites[tempTar - minRollValue];
             yield return new WaitForSecondsRealtime(waitTime);
         }
-        Destroy(tempFaceDisplay);
-        tempFaceDisplay = Instantiate(numberFaceDisplays[tarRollValue - minRollValue], posn, transform.rotation);
+        faceNumber.GetComponent<Image>().sprite = faceNumberSprites[tarRollValue - minRollValue];
     }
 }
