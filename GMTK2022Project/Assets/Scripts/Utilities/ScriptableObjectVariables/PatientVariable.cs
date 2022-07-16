@@ -2,14 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(menuName = "Variable.../Int Variable")]
-public class IntVariable : ScriptableObject
+[CreateAssetMenu(menuName = "Variable.../Patient Variable")]
+public class PatientVariable : ScriptableObject
 {
     public VariableUpdated ValueUpdated;
 
-    [SerializeField] private int value;
+    [SerializeField] private Patient value;
 
-    public int Value
+    public Patient Value
     {
         get
         {

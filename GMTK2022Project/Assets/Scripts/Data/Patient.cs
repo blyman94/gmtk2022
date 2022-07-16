@@ -2,17 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Patient : ScriptableObject
+[System.Serializable]
+public class Patient 
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    public string Name;
+    public PatientRank Rank;
+    public Injury Injury;
+    public bool IsMarried;
+    public int ChildCount;
+    public int Age;
+    public string CivOccupation;
+    public int DaysUntilDischarge;
 }

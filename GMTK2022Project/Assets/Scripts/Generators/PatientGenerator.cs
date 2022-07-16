@@ -4,15 +4,29 @@ using UnityEngine;
 
 public class PatientGenerator : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private List<string> patientNames;
+    [SerializeField] private List<Injury> injuries;
+
+    private List<string> availablePatientNames;
+
+    private void Start()
     {
-        
+        ResetNameList();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void ResetNameList()
     {
-        
+        availablePatientNames = patientNames;
+    }
+
+    public Patient GeneratePatient()
+    {
+        Patient patient = new Patient();
+        patient.Name = availablePatientNames[Random.Range(0, availablePatientNames.Count - 1)];
+        availablePatientNames.Remove(patient.Name);
+        patient.Injury = injuries[Random.Range(0, injuries.Count)];
+        patient.Rank = (PatientRank)Random.Range(0, 3);
+
+        return patient;
     }
 }
