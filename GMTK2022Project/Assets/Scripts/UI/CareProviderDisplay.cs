@@ -132,10 +132,12 @@ public class CareProviderDisplay : MonoBehaviour, IDragHandler, IBeginDragHandle
                 if (breakroomDisplay != null && !AssignedToPatient && !AssignedToBreakroom)
                 {
                     int breakroomDisplayIndex = breakroomDisplay.index;
-                    breakroomProvider.AddAtIndexUnique(currentProvider.Value,
-                        breakroomDisplayIndex);
-                    AssignedToBreakroom = true;
-                    UpdateDisplay();
+                    if(breakroomProvider.CheckValidPlacement(breakroomDisplayIndex)){
+                        breakroomProvider.AddAtIndexUnique(currentProvider.Value,
+                            breakroomDisplayIndex);
+                        AssignedToBreakroom = true;
+                        UpdateDisplay();
+                    }
                     break;
                 }
 

@@ -9,7 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2225421dbbf609f42960c823077f321d, type: 3}
-  m_Name: PatientDeathCount
+  m_Script: {fileID: 11500000, guid: 9f3c8fcfcbc5b9345ae7e24f6dd2e4f6, type: 3}
+  m_Name: nullRole
   m_EditorClassIdentifier: 
-  value: 2
+  RoleName: 
+  MaxDiceValue: 0
+  MaxMorale: 0

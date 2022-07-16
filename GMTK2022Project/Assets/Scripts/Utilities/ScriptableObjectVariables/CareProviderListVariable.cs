@@ -29,6 +29,12 @@ public class CareProviderListVariable : ScriptableObject
         ValueUpdated?.Invoke();
     }
 
+    public bool CheckValidPlacement(int index)
+    {
+        return value[index] == nullProvider;
+
+    }
+
     public void ResetList(int entries)
     {
         value = new List<CareProvider>();
