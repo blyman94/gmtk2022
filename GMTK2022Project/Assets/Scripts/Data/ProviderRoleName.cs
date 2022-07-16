@@ -1,0 +1,1 @@
+public enum ProviderRoleName {Doctor, Nurse, Medic}
