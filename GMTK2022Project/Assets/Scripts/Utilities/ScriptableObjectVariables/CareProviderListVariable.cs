@@ -21,4 +21,10 @@ public class CareProviderListVariable : ScriptableObject
             ValueUpdated?.Invoke();
         }
     }
+
+    public void AddAtIndex(CareProvider provider, int index)
+    {
+        value[index] = provider;
+        ValueUpdated?.Invoke();
+    }
 }
