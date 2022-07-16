@@ -129,7 +129,7 @@ public class CareProviderDisplay : MonoBehaviour, IDragHandler, IBeginDragHandle
                 // TODO: Signal the player the doctor cannot be assigned because with patient.
                 BreakroomDisplay breakroomDisplay =
                     go.gameObject.GetComponent<BreakroomDisplay>();
-                if (breakroomDisplay != null && !AssignedToPatient)
+                if (breakroomDisplay != null && !AssignedToPatient && !AssignedToBreakroom)
                 {
                     int breakroomDisplayIndex = breakroomDisplay.index;
                     breakroomProvider.AddAtIndexUnique(currentProvider.Value,
@@ -141,7 +141,7 @@ public class CareProviderDisplay : MonoBehaviour, IDragHandler, IBeginDragHandle
 
                 PatientListItemObserver patientObserver =
                     go.gameObject.GetComponent<PatientListItemObserver>();
-                if (patientObserver != null && !AssignedToBreakroom)
+                if (patientObserver != null && !AssignedToBreakroom && !AssignedToPatient)
                 {
                     // TODO: Signal the player the doctor cannot be assigned because in breakroom.
                     bool success = patientObserver.TryAddProvider(currentProvider.Value);

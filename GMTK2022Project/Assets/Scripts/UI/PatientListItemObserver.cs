@@ -72,7 +72,7 @@ public class PatientListItemObserver : MonoBehaviour
         UpdateDisplay();
     }
 
-    public void UpdateSelectedPatient()
+    public void SetSelectedPatient()
     {
         selectedPatient.Value = observedPatient;
     }

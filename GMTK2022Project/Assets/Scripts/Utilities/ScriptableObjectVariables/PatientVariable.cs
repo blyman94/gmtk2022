@@ -7,7 +7,7 @@ public class PatientVariable : ScriptableObject
 {
     public VariableUpdated ValueUpdated;
 
-    [SerializeField] private Patient value;
+    private Patient value;
 
     public Patient Value
     {
