@@ -15,4 +15,5 @@ MonoBehaviour:
   PrestigeLevel: 1
   Abbreviation: PVT
   Title: Private
-  Description: Private Description...
+  Description: This is an exteremely long rank description used to test rank description
+    display behaviour.

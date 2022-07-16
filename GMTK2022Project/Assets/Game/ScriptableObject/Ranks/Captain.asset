@@ -15,4 +15,5 @@ MonoBehaviour:
   PrestigeLevel: 3
   Abbreviation: CPT
   Title: Captain
-  Description: Captain Description...
+  Description: This is an exteremely long rank description used to test rank description
+    display behaviour.

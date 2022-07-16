@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: InjuryB
   m_EditorClassIdentifier: 
   SurvivalThreshold: 15
+  Description: This is an exteremely long injury description used to test injury
+    description display behaviour.
