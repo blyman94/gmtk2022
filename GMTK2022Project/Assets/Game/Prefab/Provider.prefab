@@ -68,6 +68,7 @@ MonoBehaviour:
   moraleSlider: {fileID: 3383011984798980423}
   moraleColor: {fileID: 3383011983267322931}
   currentCareProvider: {fileID: 11400000, guid: 234a85f9fa100f34692e201e800bd376, type: 2}
+  dayPatientList: {fileID: 11400000, guid: d9737e22947d1854d97d4b2757b10196, type: 2}
 --- !u!114 &5998303455159046279
 MonoBehaviour:
   m_ObjectHideFlags: 0

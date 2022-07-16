@@ -11,5 +11,6 @@ public class CareProvider : ScriptableObject
      public Sprite image;
      public Color indicator;
      public ProviderRole role;
-     
+     public bool assigned;
+   
 }

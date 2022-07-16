@@ -13,4 +13,13 @@ public class Patient
     public int Age;
     public string CivOccupation;
     public int DaysUntilDischarge;
+    public List<CareProvider> ProviderSlots;
+
+    public void UnassignProvider(CareProvider provider)
+    {
+        if (ProviderSlots.Contains(provider))
+        {
+            ProviderSlots.Remove(provider);
+        }
+    }
 }

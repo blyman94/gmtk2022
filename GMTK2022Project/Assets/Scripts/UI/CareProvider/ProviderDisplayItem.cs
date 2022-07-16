@@ -19,6 +19,7 @@ public class ProviderDisplayItem : MonoBehaviour, IDragHandler, IEndDragHandler,
     private LayoutElement _layoutElement;
 
     [SerializeField] private CareProviderVariable currentCareProvider;
+    [SerializeField] private PatientListVariable dayPatientList;
     
     public CareProvider ObservedProvider
     {
@@ -84,14 +85,28 @@ public class ProviderDisplayItem : MonoBehaviour, IDragHandler, IEndDragHandler,
         {
             foreach(var go in raycastResults)
             {
-                Debug.Log(go.gameObject.name,go.gameObject);
+
                 BreakRoomDisplay breakroomDisplay = go.gameObject.GetComponent<BreakRoomDisplay>();
-                Debug.Log(breakroomDisplay == null);
                 if ( breakroomDisplay != null)
                 {
                     breakroomDisplay.ObservedProvider =
                         currentCareProvider.Value;
                 }
+
+                PatientListItem patientListItem = go.gameObject.GetComponentInParent<PatientListItem>();
+                Debug.Log(go.gameObject.name,go.gameObject);
+                if (patientListItem != null)
+                {
+                    foreach (Patient patient in dayPatientList.Value)
+                    {
+                        patientListItem.UnassignProvider(currentCareProvider.Value);
+                        Debug.Log("Test");
+                    }
+
+                    currentCareProvider.Value.assigned = true;
+                    patientListItem.TryAddObservedProvider(currentCareProvider.Value);
+                }
+
             }
         }
         
