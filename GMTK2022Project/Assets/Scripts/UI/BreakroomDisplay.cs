@@ -25,15 +25,21 @@ public class BreakroomDisplay : MonoBehaviour
     }
     public int index;
 
+    private void Start()
+    {
+        UpdateDisplay();
+    }
+
     private void UpdateDisplay()
     {
-        if(provider != null){
-        providerName.text = provider.Name;
+        if (provider != null)
+        {
+            providerName.text = provider.Name;
         }
         else
         {
             providerName.text = "EMPTY";
         }
     }
-  
+
 }

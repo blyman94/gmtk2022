@@ -7,11 +7,15 @@ using UnityEngine.UI;
 
 public class CareProviderDisplay : MonoBehaviour, IDragHandler, IBeginDragHandler, IEndDragHandler
 {
+    public bool AssignedToPatient;
+    public bool AssignedToBreakroom;
+
     [SerializeField] private CareProvider provider;
 
     [SerializeField] private TextMeshProUGUI NameField;
     [SerializeField] private TextMeshProUGUI RoleField;
     [SerializeField] private TextMeshProUGUI DiceField;
+    [SerializeField] private TextMeshProUGUI StatusField;
     [SerializeField] private Slider moraleSlider;
     [SerializeField] private Image backgroundTint;
     [SerializeField] private Image moraleColor;
@@ -21,8 +25,6 @@ public class CareProviderDisplay : MonoBehaviour, IDragHandler, IBeginDragHandle
     [SerializeField]
     private CareProviderListVariable breakroomProvider;
     private LayoutElement _layoutElement;
-
-    
 
     public CareProvider Provider
     {
@@ -50,19 +52,44 @@ public class CareProviderDisplay : MonoBehaviour, IDragHandler, IBeginDragHandle
         moraleColor.color = Color.Lerp(Color.green, Color.red,
             (provider.Role.MaxMorale - provider.CurrentMorale) / provider.Role.MaxMorale);
 
+        if (AssignedToBreakroom && AssignedToPatient)
+        {
+            StatusField.text = "ERROR";
+        }
+        else if (AssignedToBreakroom)
+        {
+            StatusField.text = "Break";
+        }
+        else if (AssignedToPatient)
+        {
+            StatusField.text = "Patient";
+        }
+        else
+        {
+            StatusField.text = "";
+        }
+
     }
-    
+
     // Start is called before the first frame update
     void Start()
     {
         if (provider != null)
         {
-            provider.CurrentMorale= provider.Role.MaxMorale;
+            AssignedToPatient = false;
+            AssignedToBreakroom = false;
+            provider.CurrentMorale = provider.Role.MaxMorale;
             UpdateDisplay();
         }
-        
+
         _layoutElement = GetComponent<LayoutElement>();
 
+    }
+
+    public void ClearFromBreakRoom()
+    {
+        AssignedToBreakroom = false;
+        UpdateDisplay();
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -81,7 +108,7 @@ public class CareProviderDisplay : MonoBehaviour, IDragHandler, IBeginDragHandle
     public void OnEndDrag(PointerEventData eventData)
     {
         _layoutElement.ignoreLayout = false;
-      
+
         PointerEventData pointer = new PointerEventData(EventSystem.current);
         pointer.position = Input.mousePosition;
 
@@ -98,12 +125,16 @@ public class CareProviderDisplay : MonoBehaviour, IDragHandler, IBeginDragHandle
                 if (breakroomDisplay != null)
                 {
                     int breakroomDisplayIndex = breakroomDisplay.index;
-                    breakroomProvider.AddAtIndex(currentProvider.Value, breakroomDisplayIndex);
+                    breakroomProvider.AddAtIndexUnique(currentProvider.Value,
+                        breakroomDisplayIndex);
+                    AssignedToBreakroom = true;
+                    UpdateDisplay();
+                    break;
                 }
             }
             currentProvider.Value = null;
         }
-        }
-         
     }
+
+}
 

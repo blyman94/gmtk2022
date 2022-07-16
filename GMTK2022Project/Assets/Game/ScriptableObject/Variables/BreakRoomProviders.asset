@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: BreakRoomProviders
   m_EditorClassIdentifier: 
   value:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: 71f4b475f9bbe6a47b63e9e7fed227c4, type: 2}
+  - {fileID: 11400000, guid: 1f3a09cec7a062a438d60d6916f8c5ec, type: 2}
+  nullProvider: {fileID: 11400000, guid: 71f4b475f9bbe6a47b63e9e7fed227c4, type: 2}
