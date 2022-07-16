@@ -21,7 +21,8 @@ public class DayOverProcedure : MonoBehaviour
                 patientDeathCount.Value += 1;
             }
 
-            string toPrintString = patient.Name + ":\n";
+            string toPrintString = patient.Name + " | " + 
+                patient.Background.Rank.Title + ":\n";
             toPrintString += string.Format("    NaturalThrow: {0}\n", naturalThrow);
             for (int i = 0; i < providerThrows.Count; i++)
             {

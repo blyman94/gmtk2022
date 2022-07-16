@@ -8,11 +8,12 @@ public class Patient
     public string Name;
     public Injury Injury;
     public List<CareProvider> AssignedProviders { get; set; }
-    public int PotentialMoraleDelta = 0;
+    public PatientBackground Background;
 
-    public Patient(string name, Injury injury)
+    public Patient(string name, PatientBackground background, Injury injury)
     {
         AssignedProviders = new List<CareProvider>();
+        Background = background;
         Name = name;
         Injury = injury;
     }
@@ -46,7 +47,8 @@ public class Patient
     {
         foreach (CareProvider careProvider in AssignedProviders)
         {
-            careProvider.MoraleChangeFromPatientOutcome = survived ? 0 : -PotentialMoraleDelta;
+            careProvider.MoraleChangeFromPatientOutcome = survived ? 0 : 
+                -Background.Rank.PrestigeLevel;
         }
     }
 }

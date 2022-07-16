@@ -171,7 +171,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &64656970
 GameObject:
@@ -217,7 +217,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &64656973
 MonoBehaviour:
@@ -499,6 +499,11 @@ MonoBehaviour:
   - {fileID: 11400000, guid: d02ea32315d921141aa5a0b9f2252ad6, type: 2}
   - {fileID: 11400000, guid: 5c91198a994a7a94db91b1b9049d4ad1, type: 2}
   - {fileID: 11400000, guid: bc66d5906403a8f49b5fd6603e64e7d0, type: 2}
+  allRanks:
+  - {fileID: 11400000, guid: 3fb54fae1c4e0d3489644c733ad19f4b, type: 2}
+  - {fileID: 11400000, guid: 125feb27ec6529147bfecf7853619b15, type: 2}
+  - {fileID: 11400000, guid: 5d4a3b7445e387545a9099371a67a7fb, type: 2}
+  - {fileID: 11400000, guid: 83cdedcd2736dbe408e4ab9f64296065, type: 2}
   daysPatients: {fileID: 11400000, guid: 0c7839aaf12a0cf4f9ae180e25051ebc, type: 2}
 --- !u!4 &1608496083
 Transform:
@@ -544,7 +549,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1735431515
 GameObject:

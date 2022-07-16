@@ -10,8 +10,8 @@ public class BreakroomHandler : MonoBehaviour
     {
         foreach (CareProvider provider in breakRoomProviders.Value)
         {
-            provider.MoraleChangeFromBreakroom = 1;
-            //provider.Role.MaxMorale - provider.CurrentMorale;
+            provider.MoraleChangeFromBreakroom = provider.Role.MaxMorale - 
+                provider.CurrentMorale;
         }
     }
 }
