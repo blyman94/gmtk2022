@@ -14,11 +14,79 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   value:
   - Name: Patient_0
-    Injury: {fileID: 11400000, guid: bc66d5906403a8f49b5fd6603e64e7d0, type: 2}
-    PotentialMoraleDelta: 0
+    Injury: {fileID: 11400000, guid: d02ea32315d921141aa5a0b9f2252ad6, type: 2}
+    AssignedProviders:
+    - {fileID: 11400000, guid: 84bdd07ba70c495469dceec657c1e6f4, type: 2}
+    - {fileID: 11400000, guid: 54094b85475575c4ab1d1aa5e279b595, type: 2}
+    Background:
+      Rank: {fileID: 11400000, guid: 5d4a3b7445e387545a9099371a67a7fb, type: 2}
+      IsMarried: 1
+      ChildCount: 16
+      Age: 53
+      DaysUntilDischarge: 323
   - Name: Patient_1
     Injury: {fileID: 11400000, guid: 5c91198a994a7a94db91b1b9049d4ad1, type: 2}
-    PotentialMoraleDelta: 0
+    AssignedProviders:
+    - {fileID: 11400000, guid: 54094b85475575c4ab1d1aa5e279b595, type: 2}
+    - {fileID: 11400000, guid: 54094b85475575c4ab1d1aa5e279b595, type: 2}
+    Background:
+      Rank: {fileID: 11400000, guid: 125feb27ec6529147bfecf7853619b15, type: 2}
+      IsMarried: 0
+      ChildCount: 7
+      Age: 59
+      DaysUntilDischarge: 177
   - Name: Patient_2
     Injury: {fileID: 11400000, guid: bc66d5906403a8f49b5fd6603e64e7d0, type: 2}
-    PotentialMoraleDelta: 0
+    AssignedProviders:
+    - {fileID: 11400000, guid: 55761ae59feb841418df1c0ad45ff6ee, type: 2}
+    - {fileID: 11400000, guid: 84bdd07ba70c495469dceec657c1e6f4, type: 2}
+    Background:
+      Rank: {fileID: 11400000, guid: 125feb27ec6529147bfecf7853619b15, type: 2}
+      IsMarried: 0
+      ChildCount: 4
+      Age: 29
+      DaysUntilDischarge: 369
+  - Name: Patient_3
+    Injury: {fileID: 11400000, guid: d02ea32315d921141aa5a0b9f2252ad6, type: 2}
+    AssignedProviders:
+    - {fileID: 11400000, guid: 54094b85475575c4ab1d1aa5e279b595, type: 2}
+    - {fileID: 11400000, guid: 1f3a09cec7a062a438d60d6916f8c5ec, type: 2}
+    Background:
+      Rank: {fileID: 11400000, guid: 83cdedcd2736dbe408e4ab9f64296065, type: 2}
+      IsMarried: 0
+      ChildCount: 12
+      Age: 31
+      DaysUntilDischarge: 450
+  - Name: Patient_4
+    Injury: {fileID: 11400000, guid: d02ea32315d921141aa5a0b9f2252ad6, type: 2}
+    AssignedProviders:
+    - {fileID: 11400000, guid: 54094b85475575c4ab1d1aa5e279b595, type: 2}
+    - {fileID: 11400000, guid: 1f3a09cec7a062a438d60d6916f8c5ec, type: 2}
+    Background:
+      Rank: {fileID: 11400000, guid: 5d4a3b7445e387545a9099371a67a7fb, type: 2}
+      IsMarried: 0
+      ChildCount: 9
+      Age: 28
+      DaysUntilDischarge: 992
+  - Name: Patient_5
+    Injury: {fileID: 11400000, guid: 5c91198a994a7a94db91b1b9049d4ad1, type: 2}
+    AssignedProviders:
+    - {fileID: 11400000, guid: 54094b85475575c4ab1d1aa5e279b595, type: 2}
+    - {fileID: 11400000, guid: 84bdd07ba70c495469dceec657c1e6f4, type: 2}
+    Background:
+      Rank: {fileID: 11400000, guid: 125feb27ec6529147bfecf7853619b15, type: 2}
+      IsMarried: 0
+      ChildCount: 16
+      Age: 35
+      DaysUntilDischarge: 188
+  - Name: Patient_6
+    Injury: {fileID: 11400000, guid: d02ea32315d921141aa5a0b9f2252ad6, type: 2}
+    AssignedProviders:
+    - {fileID: 11400000, guid: 54094b85475575c4ab1d1aa5e279b595, type: 2}
+    - {fileID: 11400000, guid: 55761ae59feb841418df1c0ad45ff6ee, type: 2}
+    Background:
+      Rank: {fileID: 11400000, guid: 125feb27ec6529147bfecf7853619b15, type: 2}
+      IsMarried: 0
+      ChildCount: 12
+      Age: 21
+      DaysUntilDischarge: 78

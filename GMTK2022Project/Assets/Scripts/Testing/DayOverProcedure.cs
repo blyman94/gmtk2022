@@ -12,8 +12,8 @@ public class DayOverProcedure : MonoBehaviour
     {
         foreach (Patient patient in dayPatients.Value)
         {
-            patient.GetSurvivalData(out int naturalThrow,
-                out List<int> providerThrows, out int survivalThreshold,
+            patient.GetSurvivalData(out Throw naturalThrow,
+                out List<Throw> providerThrows, out int survivalThreshold,
                 out int throwSum, out bool survived);
             patient.UpdateCareProviderMorales(survived);
             if (!survived)
@@ -23,10 +23,10 @@ public class DayOverProcedure : MonoBehaviour
 
             string toPrintString = patient.Name + " | " + 
                 patient.Background.Rank.Title + ":\n";
-            toPrintString += string.Format("    NaturalThrow: {0}\n", naturalThrow);
+            toPrintString += string.Format("    NaturalThrow: {0}\n", naturalThrow.GetThrow());
             for (int i = 0; i < providerThrows.Count; i++)
             {
-                toPrintString += string.Format("    Provider {0} Throw: {1}\n", i, providerThrows[i]);
+                toPrintString += string.Format("    Provider {0} Throw: {1}\n", i, providerThrows[i].GetThrow());
             }
             toPrintString += string.Format("    Throw Sum: {0}\n", throwSum);
             toPrintString += string.Format("    Survival Threshold: {0}\n", survivalThreshold);

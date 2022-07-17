@@ -6,4 +6,5 @@ using UnityEngine;
 public class Injury : ScriptableObject
 {
     public int SurvivalThreshold;
+    public string Description;
 }

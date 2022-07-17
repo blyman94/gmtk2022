@@ -15,4 +15,5 @@ MonoBehaviour:
   PrestigeLevel: 2
   Abbreviation: SGT
   Title: Sergeant
-  Description: Sergeant Description...
+  Description: This is an exteremely long rank description used to test rank description
+    display behaviour.
