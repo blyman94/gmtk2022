@@ -1,5 +1,32 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7827402994109761570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Game Over Sadder
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Game Over Sadder
+  Guid:
+    Data1: -1409341950
+    Data2: 1262902696
+    Data3: -1112397673
+    Data4: -957158345
+  Banks:
+  - {fileID: 4668167634933067109}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 40071
 --- !u!114 &-7509927339182317843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,6 +132,60 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &-3923860265038187606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Game Over Regular
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Game Over Regular
+  Guid:
+    Data1: -1484826105
+    Data2: 1338494479
+    Data3: 965606073
+    Data4: -1354280654
+  Banks:
+  - {fileID: 4668167634933067109}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 40150
+--- !u!114 &-3763081722367218414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Lock In
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Lock In
+  Guid:
+    Data1: -2079878520
+    Data2: 1114611188
+    Data3: 1756951462
+    Data4: 1864309220
+  Banks:
+  - {fileID: 4668167634933067109}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1359
 --- !u!114 &-3327289306818731190
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -212,6 +293,10 @@ MonoBehaviour:
   - {fileID: -3230146150772043123}
   - {fileID: 5589627187172841975}
   - {fileID: -5694997854991769674}
+  - {fileID: -7827402994109761570}
+  - {fileID: -3923860265038187606}
+  - {fileID: 8455238898173779840}
+  - {fileID: -3763081722367218414}
   EditorParameters:
   - {fileID: 3521659842734023569}
   - {fileID: 5020209025149535428}
@@ -219,7 +304,7 @@ MonoBehaviour:
   - {fileID: 4668167634933067109}
   StringsBanks:
   - {fileID: 829159974722760322}
-  cacheTime: 637936552091821730
+  cacheTime: 637936594703831077
   cacheVersion: 131591
 --- !u!114 &829159974722760322
 MonoBehaviour:
@@ -236,10 +321,10 @@ MonoBehaviour:
   Path: FMOD Banks/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637936552050998157
+  lastModified: 637936594703831077
   FileSizes:
   - Name: 
-    Value: 1252
+    Value: 1434
   Exists: 1
 --- !u!114 &1248995895399868238
 MonoBehaviour:
@@ -295,7 +380,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 4470
+  Length: 3501
 --- !u!114 &3521659842734023569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -335,7 +420,7 @@ MonoBehaviour:
   Path: FMOD Banks/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637936552091821730
+  lastModified: 637936594696610987
   FileSizes: []
   Exists: 1
 --- !u!114 &5020209025149535428
@@ -413,3 +498,30 @@ MonoBehaviour:
   IsGlobal: 1
   Labels: []
   Exists: 1
+--- !u!114 &8455238898173779840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Confirm
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Confirm
+  Guid:
+    Data1: 271939664
+    Data2: 1121857184
+    Data3: -1337355118
+    Data4: -520621086
+  Banks:
+  - {fileID: 4668167634933067109}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 1458

@@ -8,6 +8,9 @@ public class GameStartUp : MonoBehaviour
     [SerializeField] private IntVariable PatientDeathCount;
     [SerializeField] private IntVariable DayCount;
     [SerializeField] private IntVariable TotalMorale;
+
+    [SerializeField]
+    private PatientIncrementor _incrementor;
     
 
     
@@ -26,6 +29,7 @@ public class GameStartUp : MonoBehaviour
         }
 
         TotalMorale.Value = totalMoral;
+        _incrementor.ResetPatientCount();
 
     }
     

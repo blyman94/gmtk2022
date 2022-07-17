@@ -25,7 +25,7 @@ public class CreditRollProcedure : MonoBehaviour
 
     private IEnumerator CreditRollRoutine()
     {
-        yield return gameOverScreen.FadeInGroupRoutine();
+       // yield return gameOverScreen.FadeInGroupRoutine();
 
         yield return creditSlides[0].FadeInGroupRoutine();
         yield return new WaitForSeconds(10);

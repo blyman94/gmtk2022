@@ -85,12 +85,36 @@ public class FMODManager : MonoBehaviour
         _musicInstance.stop(STOP_MODE.ALLOWFADEOUT);
         _musicInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Music/Title");
         _musicInstance.start();
+            
 
     }
+    
+    
+    public void GoodEnding()
+    {
+        _soundInstance.stop(STOP_MODE.ALLOWFADEOUT);
+        _musicInstance.stop(STOP_MODE.ALLOWFADEOUT);
+        _musicInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Music/Game Over Regular");
+        _musicInstance.start();
+    }
+    
+    public void BadEnding()
+    {
+        _soundInstance.stop(STOP_MODE.ALLOWFADEOUT);
+        _musicInstance.stop(STOP_MODE.ALLOWFADEOUT);
+        _musicInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Music/Game Over Sadder");
+        _musicInstance.start();
+    }
+
     
     public void PlayDiceRoll()
     {
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Dice Roll");
+    }
+    
+    public void PlayConfirm()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Confirm");
     }
     
     public void PlayButton()

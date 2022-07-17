@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &6461186906487921712
+--- !u!1 &4054021098551684964
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,11 +8,13 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 6461186906487921725}
-  - component: {fileID: 6461186906487921726}
-  - component: {fileID: 6461186906487921727}
-  - component: {fileID: 6461186906487921723}
-  - component: {fileID: 6461186906487921724}
+  - component: {fileID: 4054021098551684969}
+  - component: {fileID: 4054021098551684970}
+  - component: {fileID: 4054021098551684971}
+  - component: {fileID: 4054021098551684968}
+  - component: {fileID: 4054021098551684975}
+  - component: {fileID: 4054021098551684974}
+  - component: {fileID: 1684397016}
   m_Layer: 0
   m_Name: FMODHandler
   m_TagString: Untagged
@@ -20,14 +22,14 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &6461186906487921725
+--- !u!4 &4054021098551684969
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6461186906487921712}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_GameObject: {fileID: 4054021098551684964}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 273.22058, y: 909.12476, z: 8.704032}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -35,13 +37,13 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6461186906487921726
+--- !u!114 &4054021098551684970
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6461186906487921712}
+  m_GameObject: {fileID: 4054021098551684964}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3091d3e95828bee468b7b2ec477d18b8, type: 3}
@@ -49,14 +51,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TotalMorale: {fileID: 11400000, guid: c0968dd6fe4a88043a1054c656631eab, type: 2}
   selectedPatient: {fileID: 11400000, guid: 3efed2be7425bc046bfa42a0fdd211b8, type: 2}
+  currentProvider: {fileID: 11400000, guid: 6d31bd843f6eb164f9aae1795561da38, type: 2}
   index: 0
---- !u!114 &6461186906487921727
+--- !u!114 &4054021098551684971
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6461186906487921712}
+  m_GameObject: {fileID: 4054021098551684964}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cbc72ecd1b5ddd7499bcb583bd5da74b, type: 3}
@@ -66,7 +69,7 @@ MonoBehaviour:
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6461186906487921726}
+      - m_Target: {fileID: 4054021098551684970}
         m_TargetAssemblyTypeName: FMODManager, Assembly-CSharp
         m_MethodName: StartTitle
         m_Mode: 1
@@ -78,13 +81,41 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &6461186906487921723
+--- !u!114 &4054021098551684968
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6461186906487921712}
+  m_GameObject: {fileID: 4054021098551684964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cbc72ecd1b5ddd7499bcb583bd5da74b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: e92258b8102ecd344a63139aff58471d, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4054021098551684970}
+        m_TargetAssemblyTypeName: FMODManager, Assembly-CSharp
+        m_MethodName: PlayButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &4054021098551684975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4054021098551684964}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cbc72ecd1b5ddd7499bcb583bd5da74b, type: 3}
@@ -94,7 +125,7 @@ MonoBehaviour:
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6461186906487921726}
+      - m_Target: {fileID: 4054021098551684970}
         m_TargetAssemblyTypeName: FMODManager, Assembly-CSharp
         m_MethodName: startGameplay
         m_Mode: 1
@@ -106,7 +137,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 6461186906487921726}
+      - m_Target: {fileID: 4054021098551684970}
         m_TargetAssemblyTypeName: FMODManager, Assembly-CSharp
         m_MethodName: startBackground
         m_Mode: 1
@@ -118,25 +149,44 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &6461186906487921724
+--- !u!114 &4054021098551684974
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6461186906487921712}
+  m_GameObject: {fileID: 4054021098551684964}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9468c5f457ace64f8d4df6d642b107f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoadEvent: 1
+  UnloadEvent: 2
+  Banks:
+  - Master
+  - Master.strings
+  CollisionTag: 
+  PreloadSamples: 0
+--- !u!114 &1684397016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4054021098551684964}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cbc72ecd1b5ddd7499bcb583bd5da74b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: e92258b8102ecd344a63139aff58471d, type: 2}
+  Event: {fileID: 11400000, guid: 0ba40edea61a9e349b87110e9bb2a354, type: 2}
   Response:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 6461186906487921726}
+      - m_Target: {fileID: 4054021098551684970}
         m_TargetAssemblyTypeName: FMODManager, Assembly-CSharp
-        m_MethodName: PlayButton
+        m_MethodName: PlayConfirm
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

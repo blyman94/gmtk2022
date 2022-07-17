@@ -1439,161 +1439,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 129054447}
   m_CullTransparentMesh: 1
---- !u!1 &153768023
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 153768026}
-  - component: {fileID: 153768025}
-  - component: {fileID: 153768024}
-  - component: {fileID: 153768027}
-  - component: {fileID: 153768028}
-  - component: {fileID: 153768029}
-  m_Layer: 0
-  m_Name: FMODHandler
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &153768024
+--- !u!114 &153768025 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 4054021098551684970, guid: 1fbc24d4f4873c64f9a5a463d67af4a0, type: 3}
+  m_PrefabInstance: {fileID: 4054021098670849843}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 153768023}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbc72ecd1b5ddd7499bcb583bd5da74b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 9687155ad97f8254f93c0576816c0159, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 153768025}
-        m_TargetAssemblyTypeName: FMODManager, Assembly-CSharp
-        m_MethodName: StartTitle
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &153768025
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 153768023}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3091d3e95828bee468b7b2ec477d18b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TotalMorale: {fileID: 11400000, guid: c0968dd6fe4a88043a1054c656631eab, type: 2}
-  selectedPatient: {fileID: 11400000, guid: 3efed2be7425bc046bfa42a0fdd211b8, type: 2}
-  currentProvider: {fileID: 11400000, guid: 6d31bd843f6eb164f9aae1795561da38, type: 2}
-  index: 0
---- !u!4 &153768026
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 153768023}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 273.22058, y: 909.12476, z: 8.704032}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &153768027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 153768023}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbc72ecd1b5ddd7499bcb583bd5da74b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: e92258b8102ecd344a63139aff58471d, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 153768025}
-        m_TargetAssemblyTypeName: FMODManager, Assembly-CSharp
-        m_MethodName: PlayButton
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &153768028
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 153768023}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cbc72ecd1b5ddd7499bcb583bd5da74b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Event: {fileID: 11400000, guid: 4fe00233e695c84498d80bc3692bda50, type: 2}
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 153768025}
-        m_TargetAssemblyTypeName: FMODManager, Assembly-CSharp
-        m_MethodName: startGameplay
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &153768029
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 153768023}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b9468c5f457ace64f8d4df6d642b107f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  LoadEvent: 1
-  UnloadEvent: 2
-  Banks:
-  - Master
-  - Master.strings
-  CollisionTag: 
-  PreloadSamples: 0
 --- !u!1 &166532218
 GameObject:
   m_ObjectHideFlags: 0
@@ -20571,6 +20427,63 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a953bc12bb6e26a4da31cc19c8db52c1, type: 3}
+--- !u!1001 &4054021098670849843
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4054021098551684964, guid: 1fbc24d4f4873c64f9a5a463d67af4a0, type: 3}
+      propertyPath: m_Name
+      value: FMODHandler
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054021098551684969, guid: 1fbc24d4f4873c64f9a5a463d67af4a0, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054021098551684969, guid: 1fbc24d4f4873c64f9a5a463d67af4a0, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 273.22058
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054021098551684969, guid: 1fbc24d4f4873c64f9a5a463d67af4a0, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 909.12476
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054021098551684969, guid: 1fbc24d4f4873c64f9a5a463d67af4a0, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8.704032
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054021098551684969, guid: 1fbc24d4f4873c64f9a5a463d67af4a0, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054021098551684969, guid: 1fbc24d4f4873c64f9a5a463d67af4a0, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054021098551684969, guid: 1fbc24d4f4873c64f9a5a463d67af4a0, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054021098551684969, guid: 1fbc24d4f4873c64f9a5a463d67af4a0, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054021098551684969, guid: 1fbc24d4f4873c64f9a5a463d67af4a0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054021098551684969, guid: 1fbc24d4f4873c64f9a5a463d67af4a0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4054021098551684969, guid: 1fbc24d4f4873c64f9a5a463d67af4a0, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1fbc24d4f4873c64f9a5a463d67af4a0, type: 3}
 --- !u!1001 &4419182842348358818
 PrefabInstance:
   m_ObjectHideFlags: 0
