@@ -2,6 +2,7 @@ using System.Globalization;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class DiceRollUI : MonoBehaviour
@@ -17,7 +18,10 @@ public class DiceRollUI : MonoBehaviour
 
     public Transform pivot;
     public GameObject faceNumber;
+
     
+    public UnityEvent onFinishRoll;
+
     public void RandomDiceRoll(Throw diceValues) {
         StartCoroutine(WaitBeforeFlash(diceValues));
     }
@@ -33,6 +37,7 @@ public class DiceRollUI : MonoBehaviour
         
         //yield return Spin(new Quaternion(0, 0, 0, 1));
         faceNumber.GetComponent<Image>().sprite = faceNumberSprites[diceValues.GetThrow()];
+        onFinishRoll?.Invoke();
     }
 
     IEnumerator Spin(Quaternion rotation)
