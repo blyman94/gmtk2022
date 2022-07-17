@@ -91,7 +91,6 @@ public class FMODManager : MonoBehaviour
     public void PlayDiceRoll()
     {
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Dice Roll");
-        Debug.Log("Play Dice Roll");
     }
     
     public void PlayButton()
@@ -120,4 +119,11 @@ public class FMODManager : MonoBehaviour
     {
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Menu Drop");
     }
+
+    public void StopMusic()
+    {
+        _musicInstance.stop(STOP_MODE.ALLOWFADEOUT);
+    }
+    
+  
 }
