@@ -334,6 +334,7 @@ GameObject:
   - component: {fileID: 35242566}
   - component: {fileID: 35242568}
   - component: {fileID: 35242567}
+  - component: {fileID: 35242569}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -376,7 +377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.392}
+  m_Color: {r: 0.4528302, g: 0.4528302, b: 0.4528302, a: 0.392}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -401,6 +402,32 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 35242565}
   m_CullTransparentMesh: 1
+--- !u!114 &35242569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 35242565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59f8146938fff824cb5fd77236b75775, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Padding:
+    m_Left: 0
+    m_Right: 0
+    m_Top: 0
+    m_Bottom: 0
+  m_ChildAlignment: 4
+  m_Spacing: 37.16
+  m_ChildForceExpandWidth: 0
+  m_ChildForceExpandHeight: 0
+  m_ChildControlWidth: 0
+  m_ChildControlHeight: 0
+  m_ChildScaleWidth: 0
+  m_ChildScaleHeight: 0
+  m_ReverseArrangement: 0
 --- !u!1 &53877698
 GameObject:
   m_ObjectHideFlags: 0
@@ -2802,6 +2829,82 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &248515613
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 248515614}
+  - component: {fileID: 248515616}
+  - component: {fileID: 248515615}
+  m_Layer: 5
+  m_Name: Image (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &248515614
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248515613}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 342463842}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 570, y: -270}
+  m_SizeDelta: {x: 350, y: 350}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &248515615
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248515613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 918e2905f22d9b04ebabe133d95f9ae5, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &248515616
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 248515613}
+  m_CullTransparentMesh: 1
 --- !u!1 &248819340
 GameObject:
   m_ObjectHideFlags: 0
@@ -4147,6 +4250,8 @@ RectTransform:
   - {fileID: 1509943672}
   - {fileID: 543348258}
   - {fileID: 1045700804}
+  - {fileID: 1191232921}
+  - {fileID: 248515614}
   m_Father: {fileID: 1698183709}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6257,8 +6362,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.000022888, y: 91.682}
-  m_SizeDelta: {x: 1343.3232, y: 183.3649}
+  m_AnchoredPosition: {x: 0.000015259, y: 164}
+  m_SizeDelta: {x: 1790.6423, y: 474.3042}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &543348259
 MonoBehaviour:
@@ -6280,7 +6385,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: GAME NAME
+  m_text: 'Field Hospital: Valkyrie'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ed7bfedf46a04ec4f90f6b82537655f6, type: 2}
   m_sharedMaterial: {fileID: -4021718015627242110, guid: ed7bfedf46a04ec4f90f6b82537655f6, type: 2}
@@ -7946,10 +8051,10 @@ RectTransform:
   m_Father: {fileID: 35242566}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 61}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 379.7825, y: 92.2353}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &684311245
 MonoBehaviour:
@@ -8013,8 +8118,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 62
+  m_fontSizeBase: 62
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -9673,7 +9778,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: SUBMIT ALLOCATIONS
+  m_text: SUBMIT
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ed7bfedf46a04ec4f90f6b82537655f6, type: 2}
   m_sharedMaterial: {fileID: -4021718015627242110, guid: ed7bfedf46a04ec4f90f6b82537655f6, type: 2}
@@ -9700,8 +9805,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 45
-  m_fontSizeBase: 45
+  m_fontSize: 75
+  m_fontSizeBase: 75
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -12668,6 +12773,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1163431936}
   m_CullTransparentMesh: 1
+--- !u!1 &1191232920
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1191232921}
+  - component: {fileID: 1191232923}
+  - component: {fileID: 1191232922}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1191232921
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191232920}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 342463842}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -570, y: -270}
+  m_SizeDelta: {x: 350, y: 350}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1191232922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191232920}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: 3735b158bb10c5a42ad7dfa17252caa8, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1191232923
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1191232920}
+  m_CullTransparentMesh: 1
 --- !u!1 &1216117075
 GameObject:
   m_ObjectHideFlags: 0
@@ -13637,7 +13818,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.979017, g: 0.9811321, b: 0.21658951, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -18268,8 +18449,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d556e8f801158ab46b6152a27a9fee6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  filePathFN: ./Assets/Data/FirstNames.txt
-  filePathLN: ./Assets/Data/LastNames.txt
   patientCount: {fileID: 11400000, guid: 760751d18830ce04cb4e2a6293534873, type: 2}
   allInjuries:
   - {fileID: 11400000, guid: d02ea32315d921141aa5a0b9f2252ad6, type: 2}
@@ -18349,6 +18528,33 @@ MonoBehaviour:
   - {fileID: 11400000, guid: eb3ab86f6eb4c574a9dd694532232fce, type: 2}
   daysPatients: {fileID: 11400000, guid: 0c7839aaf12a0cf4f9ae180e25051ebc, type: 2}
   nullProvider: {fileID: 11400000, guid: 71f4b475f9bbe6a47b63e9e7fed227c4, type: 2}
+  firstNames: Ahmed Alexander Ali Archie Alice Amahle Ayesha Anna Benjamin Brian
+    Bharata Bin Barbara Birgitta Brenda Blanca Carlos Charles Chao Cesar Charlotte
+    Carmen Claudia Cynthia David Dmitriy Dinesh Dilip Daria Diana Donna Dorothy Emmanuel
+    Elijah Ermias Eduardo Emani Emily Emika Elena Francesco Fernando Faisal Frank
+    Fatimah Francisca Florence Farzana Gabriel Gang Gul Giuseppe Grace Gloria Gita
+    Gustavo Gabriela Hiroshi Hugo Hui Hassan Harper Halimah Helen Hedwig Ivan Ibrahim
+    Ismail Igor Isabella Isla Irina Ingrid Jake Jose Junior Jianhua Jenny Juliana
+    Jade Jessica Kyaw Kai Kevin Kamal Kokoro Karen Krishna Khadija Leonardo Liam
+    Li Lakshmi Layla Lucia Lin Luz Mohammed Mason Mateo Min Maria Mariam Mia Mary
+    Noah Nozomi Nur Ning Nushi Natalya Nancy Nirmala Oliver Omar Osman Oleg Olivia
+    Olga Oksana Olha Peter Ping Paulo Pavel Precious Princess Pushpa Pamela Qing
+    Quan Qun Qiong Raphael Robert Ram Ricardo Rosa Rita Rekha Rebecca Santiago Sekani
+    Sri Sergey Saanvi Sofie Sarah Svetlana Thomas Tuan Timothy Tong Tamar Theodora
+    Teresa Tamara Usman Umar Umesh Ursula Ura Uma Victor Vladimir Vijay Vicente Vivian
+    Victoria Veronica Vera Wei William Walter Werner Wendy Xin Xiaoli Xing Xuan Yan
+    Ying Yu Yusuf Yaritza Zhen Zaw Zin Zhihong Zahra
+  lastNames: "Smith  Johnson  Williams  Brown Jones  Garcia  Miller Davis Rodriguez
+    Martinez Hernandez Lopez Gonzalez Wilson Anderson Thomas Taylor Moore Jackson
+    Martin Novak Good Madden Mccann Terrell Jarvis Dickson Reyna Cantrell Mayo Branch
+    Hendrix Rollins Rowland Whitney Duke Odom Daugherty Travis Tang Archer Well Waters
+    Logan Camacho Strickland Norman Person Col\xC3\xB3n Parsons Frank Harrington
+    Glover Osborne Buchanan Casey Floyd Patton Ibarra Ball Tyler Suarez Watkins Greene
+    Nu\xC3\xB1ez Wheeler Valdez. Harper Burke Larson Santiago Maldonado Morrison
+    Franklin Carlson Austin Dominguez Carr Lawson Jacobs O\xE2\u20AC\u2122brien Lynch
+    Singh Eaton Blackwell Dyer Prince  Macdonald Solomon Guevara Stafford English
+    Hurst Woodard Cortes Shannon Kemp Nolan Mccullough Merritt Murillo Moon Salgado
+    Strong"
 --- !u!4 &1707324473
 Transform:
   m_ObjectHideFlags: 0
@@ -19753,10 +19959,10 @@ RectTransform:
   m_Father: {fileID: 35242566}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 111}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 379.7825, y: 92.2353}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1834113863
 MonoBehaviour:
@@ -19820,8 +20026,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 62
+  m_fontSizeBase: 62
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -24886,7 +25092,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0.0000038146973, y: 0}
-  m_SizeDelta: {x: 1237.6222, y: 82.3372}
+  m_SizeDelta: {x: 1237.6222, y: 220.9244}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &3353949946598193605
 GameObject:
@@ -24934,7 +25140,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: GMTK 2022 GAME NAME
+  m_text: 'Field Hospital: Valkyrie'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ed7bfedf46a04ec4f90f6b82537655f6, type: 2}
   m_sharedMaterial: {fileID: -4021718015627242110, guid: ed7bfedf46a04ec4f90f6b82537655f6, type: 2}
@@ -24961,8 +25167,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 62
-  m_fontSizeBase: 62
+  m_fontSize: 100
+  m_fontSizeBase: 100
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -25902,7 +26108,7 @@ MonoBehaviour:
   - Master
   - Master.strings
   CollisionTag: 
-  PreloadSamples: 0
+  PreloadSamples: 1
 --- !u!114 &4054021099504651534
 MonoBehaviour:
   m_ObjectHideFlags: 0

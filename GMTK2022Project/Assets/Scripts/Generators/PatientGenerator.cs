@@ -5,8 +5,6 @@ using System.IO;
 
 public class PatientGenerator : MonoBehaviour
 {
-    [SerializeField] private string filePathFN;
-    [SerializeField] private string filePathLN;
     [SerializeField] private IntVariable patientCount;
     [SerializeField] private List<Injury> allInjuries;
     [SerializeField] private List<PatientRank> allRanks;
@@ -14,13 +12,16 @@ public class PatientGenerator : MonoBehaviour
     [SerializeField] private CareProvider nullProvider;
 
     private List<Patient> patientListToStore;
-    private List<string> firstNames;
-    private List<string> lastNames;
+    [SerializeField] private string firstNames;
+    [SerializeField] private string lastNames;
+
+    private string[] firstNamesList;
+    private string[] lastNamesList;
 
     private void Start()
     {
-        firstNames = ReadNamesFromFile(filePathFN);
-        lastNames = ReadNamesFromFile(filePathLN);
+        firstNamesList = firstNames.Split(' ');
+        lastNamesList = lastNames.Split(' ');
     }
 
     public void GeneratePatients()
@@ -40,9 +41,8 @@ public class PatientGenerator : MonoBehaviour
 
     private string GenerateRandomName()
     {
-        string first = firstNames[Random.Range(0, firstNames.Count)];
-        string last = lastNames[Random.Range(0, lastNames.Count)];
-
+        string first = firstNamesList[Random.Range(0, firstNamesList.Length)];
+        string last = lastNamesList[Random.Range(0, lastNamesList.Length)];
         return first + " " + last;
     }
 
@@ -58,17 +58,11 @@ public class PatientGenerator : MonoBehaviour
             daysUntilDischarge);
     }
 
-    private List<string> ReadNamesFromFile(string filePath)
+    private List<string> ReadNamesFromFile(string fileName)
     {
         List<string> newList = new List<string>();
-        StreamReader inpStm = new StreamReader(filePath);
-
-        while (!inpStm.EndOfStream)
-        {
-            string inpLn = inpStm.ReadLine();
-            newList.Add(inpLn);
-        }
-        inpStm.Close();
-        return newList;
+        TextAsset nameAsset = Resources.Load(fileName) as TextAsset;
+        List<string> names = new List<string>(nameAsset.text.Split('\n'));
+        return names;
     }
 }
