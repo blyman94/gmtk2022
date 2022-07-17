@@ -25,13 +25,9 @@ public class GameOverBlurbHandler : MonoBehaviour
         {
             gameOverBlurbText.text = gameOverBlurbs[2];
         }
-        else if (patientDeathCount.Value > 10 && patientDeathCount.Value <= 15)
-        {
-            gameOverBlurbText.text = gameOverBlurbs[3];
-        }
         else
         {
-            gameOverBlurbText.text = gameOverBlurbs[4];
+            gameOverBlurbText.text = gameOverBlurbs[3];
         }
     }
 }
