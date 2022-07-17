@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Name: EMPTY
   indicatorColor: {r: 1, g: 1, b: 1, a: 1}
-  Role: {fileID: 0}
+  Role: {fileID: 11400000, guid: 922bfe0dd99da9a4abf1c043bc90d49b, type: 2}
   MoraleChangeFromBreakroom: 0
   MoraleChangeFromPatientOutcome: 0
   MoraleChangeFromGlobalEvent: 0

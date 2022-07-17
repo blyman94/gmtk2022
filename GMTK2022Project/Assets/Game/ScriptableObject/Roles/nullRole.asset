@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f3c8fcfcbc5b9345ae7e24f6dd2e4f6, type: 3}
   m_Name: nullRole
   m_EditorClassIdentifier: 
-  RoleName: 
+  RoleName: NULL
   MaxDiceValue: 0
   MaxMorale: 0
