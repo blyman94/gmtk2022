@@ -23,18 +23,23 @@ public class Patient
         return Random.Range(1, 21);
     }
 
-    public void GetSurvivalData(out int naturalThrow,
-        out List<int> providerThrows, out int survivalThreshold,
+    public Throw GetThrow()
+    {
+        return new Throw(1, 20, GetDiceThrow());
+    }
+
+    public void GetSurvivalData(out Throw naturalThrow,
+        out List<Throw> providerThrows, out int survivalThreshold,
         out int throwSum, out bool survived)
     {
-        naturalThrow = GetDiceThrow();
-        throwSum = naturalThrow;
+        naturalThrow = GetThrow();
+        throwSum = naturalThrow.GetThrow();
 
-        providerThrows = new List<int>();
+        providerThrows = new List<Throw>();
         foreach (CareProvider careProvider in AssignedProviders)
         {
             int provThrow = careProvider.GetDiceThrow();
-            providerThrows.Add(provThrow);
+            providerThrows.Add(new Throw(careProvider.CurrentMorale, careProvider.Role.MaxDiceValue, provThrow));
             throwSum += provThrow;
         }
 
