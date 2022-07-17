@@ -10,6 +10,8 @@ public class CareProvider : ScriptableObject
     public CareProviderRole Role;
     public int CurrentMorale { get; set; }
 
+    public int PreviousMorale { get; set; }
+
     public int MoraleChangeFromBreakroom = 0;
     public int MoraleChangeFromPatientOutcome = 0;
     public int MoraleChangeFromGlobalEvent = 0;
@@ -19,16 +21,26 @@ public class CareProvider : ScriptableObject
         return Random.Range(CurrentMorale, Role.MaxDiceValue + 1);
     }
 
-    public void UpdateCurrentMorale()
+    public void UpdateCurrentMorale(out int previousMorale, 
+        out int patientMorale, out int breakroomMorale, 
+        out int hospitalMorale, out int finalMorale)
     {
-        int totalMoraleDelta = MoraleChangeFromBreakroom + 
+        previousMorale = CurrentMorale;
+
+        patientMorale = MoraleChangeFromPatientOutcome;
+        breakroomMorale = MoraleChangeFromBreakroom;
+        hospitalMorale = MoraleChangeFromGlobalEvent;
+
+        int totalMoraleDelta = MoraleChangeFromBreakroom +
             MoraleChangeFromPatientOutcome + MoraleChangeFromGlobalEvent;
-        CurrentMorale = 
+        CurrentMorale =
             Mathf.Clamp(CurrentMorale + totalMoraleDelta, 1, Role.MaxMorale);
 
+        finalMorale = CurrentMorale;
+        
         // Reset morale changes
-        MoraleChangeFromBreakroom = 0;
         MoraleChangeFromPatientOutcome = 0;
+        MoraleChangeFromBreakroom = 0;
         MoraleChangeFromGlobalEvent = 0;
     }
 }
