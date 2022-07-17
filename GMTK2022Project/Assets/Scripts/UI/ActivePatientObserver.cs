@@ -8,6 +8,8 @@ public class ActivePatientObserver : MonoBehaviour
     [SerializeField] private PatientVariable activePatient;
     [SerializeField] private CanvasGroupRevealer choosePatientRevealer;
     [SerializeField] private TextMeshProUGUI nameText;
+    [SerializeField] private TextMeshProUGUI prestigeText;
+    [SerializeField] private TextMeshProUGUI prestigeDescriptionText;
     [SerializeField] private TextMeshProUGUI rankText;
     [SerializeField] private TextMeshProUGUI rankDescriptionText;
     [SerializeField] private TextMeshProUGUI injurySeverityText;
@@ -49,9 +51,11 @@ public class ActivePatientObserver : MonoBehaviour
             choosePatientRevealer.HideGroup();
 
             nameText.text = activePatient.Value.Name;
+            prestigeText.text = "Class " + activePatient.Value.Background.Rank.GetPrestigeGroup().ToString();
+            prestigeDescriptionText.text = activePatient.Value.Background.Rank.PrestigeDescription;
             rankText.text = activePatient.Value.Background.Rank.Title;
             rankDescriptionText.text = activePatient.Value.Background.Rank.Description;
-            injurySeverityText.text = activePatient.Value.Injury.SurvivalThreshold.ToString();
+            injurySeverityText.text = activePatient.Value.Injury.GetInjuryLevel().ToString();
             injuryDescriptionText.text = activePatient.Value.Injury.Description;
             ageText.text = activePatient.Value.Background.Age.ToString();
             marriedText.text = activePatient.Value.Background.IsMarried.ToString();

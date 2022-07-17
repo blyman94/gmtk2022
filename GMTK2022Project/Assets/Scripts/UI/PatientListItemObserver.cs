@@ -80,8 +80,8 @@ public class PatientListItemObserver : MonoBehaviour
     private void UpdateDisplay()
     {
         nameText.text = observedPatient.Name.ToUpper();
-        prestigeText.text = "PRESTIGE LEVEL: " +
-            observedPatient.Background.Rank.PrestigeLevel.ToString();
+        prestigeText.text = "PRESTIGE CLASS: " +
+            observedPatient.Background.Rank.GetPrestigeGroup().ToString();
         severityText.text = "SEVERITY: " + observedPatient.Injury.SurvivalThreshold.ToString();
         for (int i = 0; i < providerSlotImages.Count; i++)
         {
