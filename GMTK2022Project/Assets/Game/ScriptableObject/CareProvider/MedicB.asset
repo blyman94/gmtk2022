@@ -18,3 +18,4 @@ MonoBehaviour:
   MoraleChangeFromBreakroom: 0
   MoraleChangeFromPatientOutcome: 0
   MoraleChangeFromGlobalEvent: 0
+  ProviderSprite: {fileID: 21300000, guid: 0ed8bad2d45154044a7ae65605ed283f, type: 3}

@@ -16,6 +16,8 @@ public class CareProvider : ScriptableObject
     public int MoraleChangeFromPatientOutcome = 0;
     public int MoraleChangeFromGlobalEvent = 0;
 
+    public Sprite ProviderSprite;
+
     public int GetDiceThrow()
     {
         return Random.Range(CurrentMorale, Role.MaxDiceValue + 1);

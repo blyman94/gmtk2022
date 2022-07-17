@@ -49,8 +49,8 @@ public class CareProviderDisplay : MonoBehaviour, IDragHandler, IBeginDragHandle
         moraleSlider.maxValue = provider.Role.MaxMorale;
         moraleSlider.minValue = 1;
         moraleSlider.value = provider.CurrentMorale;
-        moraleColor.color = Color.Lerp(Color.green, Color.red,
-            (provider.Role.MaxMorale - provider.CurrentMorale) / provider.Role.MaxMorale);
+        moraleColor.color = Color.Lerp(Color.red,Color.green,
+            (provider.CurrentMorale) / provider.Role.MaxMorale);
 
         if (AssignedToBreakroom && AssignedToPatient)
         {

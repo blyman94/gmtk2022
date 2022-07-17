@@ -548,8 +548,8 @@ MonoBehaviour:
   throwSumText: {fileID: 7260873414303043784}
   survivalSprite: {fileID: 601907696597523412}
   liveDieSprite:
-  - {fileID: 10901, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 21300000, guid: ef5ad4956dd4d434e9a652975d1d70ee, type: 3}
+  - {fileID: 21300000, guid: 38ed6637386105d4497b83aa7a4e3012, type: 3}
+  - {fileID: 21300000, guid: f3e62f21e0f868f4a98c1fd5e10e3af1, type: 3}
   deathCountVariable: {fileID: 11400000, guid: 1c4ef80204546014d905a4e1c8430f9b, type: 2}
 --- !u!222 &4513877058286532946
 CanvasRenderer:

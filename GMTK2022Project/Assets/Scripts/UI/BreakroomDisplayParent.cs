@@ -24,7 +24,7 @@ public class BreakroomDisplayParent : MonoBehaviour
         BreakRoomProviders.ValueUpdated -= UpdateDisplay;
     }
 
-    private void UpdateDisplay()
+    public void UpdateDisplay()
     {
         for (int i = 0; i < displays.Count; i++)
         {
