@@ -54,6 +54,33 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 20
   Length: 1300
+--- !u!114 &-5694997854991769674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Menu Pickup
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Menu Pickup
+  Guid:
+    Data1: 612878139
+    Data2: 1260672770
+    Data3: 688281744
+    Data4: -389505375
+  Banks:
+  - {fileID: 4668167634933067109}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 163
 --- !u!114 &-4546621453410526003
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,13 +210,16 @@ MonoBehaviour:
   - {fileID: 2393602163929656227}
   - {fileID: -7359983470527698988}
   - {fileID: -3230146150772043123}
+  - {fileID: 5589627187172841975}
+  - {fileID: -5694997854991769674}
   EditorParameters:
   - {fileID: 3521659842734023569}
+  - {fileID: 5020209025149535428}
   MasterBanks:
   - {fileID: 4668167634933067109}
   StringsBanks:
   - {fileID: 829159974722760322}
-  cacheTime: 637936503466972857
+  cacheTime: 637936552091821730
   cacheVersion: 131591
 --- !u!114 &829159974722760322
 MonoBehaviour:
@@ -206,10 +236,10 @@ MonoBehaviour:
   Path: FMOD Banks/Master.strings.bank
   Name: Master.strings
   StudioPath: bank:/Master.strings
-  lastModified: 637936503466972857
+  lastModified: 637936552050998157
   FileSizes:
   - Name: 
-    Value: 1168
+    Value: 1252
   Exists: 1
 --- !u!114 &1248995895399868238
 MonoBehaviour:
@@ -265,7 +295,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 1
   MaxDistance: 20
-  Length: 2899
+  Length: 4470
 --- !u!114 &3521659842734023569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -305,9 +335,60 @@ MonoBehaviour:
   Path: FMOD Banks/Master.bank
   Name: Master
   StudioPath: bank:/Master
-  lastModified: 637936503466942846
+  lastModified: 637936552091821730
   FileSizes: []
   Exists: 1
+--- !u!114 &5020209025149535428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/In Patient View
+  m_EditorClassIdentifier: 
+  Name: In Patient View
+  StudioPath: parameter:/In Patient View
+  Min: 0
+  Max: 1
+  Default: 0
+  ID:
+    data1: 1479984388
+    data2: 28316233
+  Type: 0
+  IsGlobal: 1
+  Labels: []
+  Exists: 1
+--- !u!114 &5589627187172841975
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Menu Drop
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Menu Drop
+  Guid:
+    Data1: -1849404376
+    Data2: 1211018657
+    Data3: -1239189334
+    Data4: 57296055
+  Banks:
+  - {fileID: 4668167634933067109}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 1
+  MaxDistance: 20
+  Length: 222
 --- !u!114 &7670279218827491636
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -329,6 +410,6 @@ MonoBehaviour:
     data1: 1479984388
     data2: 28316233
   Type: 0
-  IsGlobal: 0
+  IsGlobal: 1
   Labels: []
   Exists: 1
