@@ -36,7 +36,6 @@ public class PatientGenerator : MonoBehaviour
             patientListToStore.Add(patient);
         }
         daysPatients.Value = patientListToStore;
-        Debug.Log("New Patients Generated!");
     }
 
     private string GenerateRandomName()

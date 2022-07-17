@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MedicA
   m_EditorClassIdentifier: 
   Name: Carlos Hernandez
-  indicatorColor: {r: 0.99306726, g: 1, b: 0.3803922, a: 1}
+  indicatorColor: {r: 0.851481, g: 0.3803922, b: 1, a: 1}
   Role: {fileID: 11400000, guid: 6c3452fd69fab364598639e3c66909e7, type: 2}
   MoraleChangeFromBreakroom: 0
   MoraleChangeFromPatientOutcome: 0

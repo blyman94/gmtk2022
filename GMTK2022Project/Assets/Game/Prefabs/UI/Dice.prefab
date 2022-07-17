@@ -241,7 +241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   faceNumberSprites:
-  - {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 21300000, guid: 509536cafff76884d88f028103c6f67c, type: 3}
   - {fileID: 21300000, guid: ef5ad4956dd4d434e9a652975d1d70ee, type: 3}
   - {fileID: 21300000, guid: cae79a77d1ff5474baaa2e4356f3e014, type: 3}
   - {fileID: 21300000, guid: f33f59790696a45b78802fccd3868826, type: 3}
