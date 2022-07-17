@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5b3e0416e452404097f451b71d2187c, type: 3}
+  m_Name: Rank 18
+  m_EditorClassIdentifier: 
+  PrestigeLevel: 4
+  Abbreviation: COL
+  Title: Colonel
+  Description: These are most often graduates of a military college. They are in
+    charge of thousands of soldiers at a time, and as such are responsible for a
+    significant chunk of the war effort.
+  PrestigeDescription: "These people are the architects of our war effort. Without
+    them, we don\u2019t stand a chance. Don\u2019t fuck it up."

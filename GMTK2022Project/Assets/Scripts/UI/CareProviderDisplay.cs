@@ -43,7 +43,7 @@ public class CareProviderDisplay : MonoBehaviour, IDragHandler, IBeginDragHandle
     {
         NameField.text = provider.Name;
         RoleField.text = provider.Role.RoleName;
-        DiceField.text = provider.CurrentMorale + " - " + provider.Role.MaxDiceValue;
+        DiceField.text = "Care Bonus: " + provider.CurrentMorale + " - " + provider.Role.MaxDiceValue;
 
         backgroundTint.color = provider.indicatorColor;
         moraleSlider.maxValue = provider.Role.MaxMorale;

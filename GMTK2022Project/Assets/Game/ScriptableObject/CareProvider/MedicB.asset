@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b48a41765bb4e5746b3584cce29aefd8, type: 3}
   m_Name: MedicB
   m_EditorClassIdentifier: 
-  Name: Medic B
-  indicatorColor: {r: 1, g: 0.9727186, b: 0, a: 1}
+  Name: Isla Good
+  indicatorColor: {r: 1, g: 0.3803922, b: 0.67649424, a: 1}
   Role: {fileID: 11400000, guid: 6c3452fd69fab364598639e3c66909e7, type: 2}
   MoraleChangeFromBreakroom: 0
   MoraleChangeFromPatientOutcome: 0
   MoraleChangeFromGlobalEvent: 0
-  ProviderSprite: {fileID: 21300000, guid: 0ed8bad2d45154044a7ae65605ed283f, type: 3}
+  ProviderSprite: {fileID: 21300000, guid: 3735b158bb10c5a42ad7dfa17252caa8, type: 3}

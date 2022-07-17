@@ -1,9 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 public class PatientGenerator : MonoBehaviour
 {
+    [SerializeField] private string filePathFN;
+    [SerializeField] private string filePathLN;
     [SerializeField] private IntVariable patientCount;
     [SerializeField] private List<Injury> allInjuries;
     [SerializeField] private List<PatientRank> allRanks;
@@ -11,13 +14,21 @@ public class PatientGenerator : MonoBehaviour
     [SerializeField] private CareProvider nullProvider;
 
     private List<Patient> patientListToStore;
+    private List<string> firstNames;
+    private List<string> lastNames;
+
+    private void Start()
+    {
+        firstNames = ReadNamesFromFile(filePathFN);
+        lastNames = ReadNamesFromFile(filePathLN);
+    }
 
     public void GeneratePatients()
     {
         patientListToStore = new List<Patient>();
         for (int i = 0; i < patientCount.Value; i++)
         {
-            Patient patient = new Patient("Patient_" + i.ToString(),
+            Patient patient = new Patient(GenerateRandomName(),
                 GenerateRandomBackground(),
                 allInjuries[Random.Range(0, allInjuries.Count)]);
             patient.AssignedProviders.Add(nullProvider);
@@ -25,7 +36,14 @@ public class PatientGenerator : MonoBehaviour
             patientListToStore.Add(patient);
         }
         daysPatients.Value = patientListToStore;
-        Debug.Log("New Patients Generated!");
+    }
+
+    private string GenerateRandomName()
+    {
+        string first = firstNames[Random.Range(0, firstNames.Count)];
+        string last = lastNames[Random.Range(0, lastNames.Count)];
+
+        return first + " " + last;
     }
 
     private PatientBackground GenerateRandomBackground()
@@ -38,5 +56,19 @@ public class PatientGenerator : MonoBehaviour
 
         return new PatientBackground(rank, isMarried, childCount, age,
             daysUntilDischarge);
+    }
+
+    private List<string> ReadNamesFromFile(string filePath)
+    {
+        List<string> newList = new List<string>();
+        StreamReader inpStm = new StreamReader(filePath);
+
+        while (!inpStm.EndOfStream)
+        {
+            string inpLn = inpStm.ReadLine();
+            newList.Add(inpLn);
+        }
+        inpStm.Close();
+        return newList;
     }
 }
