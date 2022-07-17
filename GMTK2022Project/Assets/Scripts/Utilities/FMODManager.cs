@@ -9,6 +9,7 @@ public class FMODManager : MonoBehaviour
 
     [SerializeField] private IntVariable TotalMorale;
     [SerializeField] private PatientVariable selectedPatient;
+    [SerializeField] private CareProviderVariable currentProvider;
 
     
 
@@ -29,23 +30,26 @@ public class FMODManager : MonoBehaviour
     {
         TotalMorale.ValueUpdated += UpdateGameplayLayers;
         selectedPatient.ValueUpdated += UpdateInView;
+        currentProvider.ValueUpdated += HandlePickup;
     }
     
     private void OnDisable()
     {
         TotalMorale.ValueUpdated -= UpdateGameplayLayers;
         selectedPatient.ValueUpdated -= UpdateInView;
+        currentProvider.ValueUpdated -= HandlePickup;
+
     }
 
     private void UpdateInView()
     {
         if (selectedPatient.Value != null)
         {
-            _musicInstance.setParameterByName("In Patient View", 1);
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("In Patient View", 1);
         }
         else
         {
-            _musicInstance.setParameterByName("In Patient View", 0);
+            FMODUnity.RuntimeManager.StudioSystem.setParameterByName("In Patient View", 0);
         }
     }
 
@@ -55,10 +59,8 @@ public class FMODManager : MonoBehaviour
         int val= ((TotalMorale.Value - 2) / 2) - 1;
         index =  val;
         
-        
         FMOD.RESULT result = FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Morale Level", index);
         FMODUnity.RuntimeManager.StudioSystem.getParameterByName("Morale Level",   out value);
-        
     }
 
 
@@ -79,13 +81,13 @@ public class FMODManager : MonoBehaviour
 
     public void StartTitle()
     {
+        _soundInstance.stop(STOP_MODE.ALLOWFADEOUT);
         _musicInstance.stop(STOP_MODE.ALLOWFADEOUT);
         _musicInstance = FMODUnity.RuntimeManager.CreateInstance("event:/Music/Title");
         _musicInstance.start();
 
     }
-
-
+    
     public void PlayDiceRoll()
     {
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Dice Roll");
@@ -95,5 +97,27 @@ public class FMODManager : MonoBehaviour
     public void PlayButton()
     {
         FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Menu Click");
+    }
+
+    public void HandlePickup()
+    {
+        if (currentProvider.Value == null)
+        {
+            PlayDrop();
+        }
+        else
+        {
+            PlayPickup();
+        }
+    }
+
+    public void PlayPickup()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Menu Pickup");
+    }
+    
+    public void PlayDrop()
+    {
+        FMODUnity.RuntimeManager.PlayOneShot("event:/SFX/Menu Drop");
     }
 }

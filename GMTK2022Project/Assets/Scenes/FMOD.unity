@@ -1452,6 +1452,7 @@ GameObject:
   - component: {fileID: 153768024}
   - component: {fileID: 153768027}
   - component: {fileID: 153768028}
+  - component: {fileID: 153768029}
   m_Layer: 0
   m_Name: FMODHandler
   m_TagString: Untagged
@@ -1501,6 +1502,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TotalMorale: {fileID: 11400000, guid: c0968dd6fe4a88043a1054c656631eab, type: 2}
   selectedPatient: {fileID: 11400000, guid: 3efed2be7425bc046bfa42a0fdd211b8, type: 2}
+  currentProvider: {fileID: 11400000, guid: 6d31bd843f6eb164f9aae1795561da38, type: 2}
   index: 0
 --- !u!4 &153768026
 Transform:
@@ -1563,18 +1565,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 153768025}
         m_TargetAssemblyTypeName: FMODManager, Assembly-CSharp
-        m_MethodName: startBackground
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 153768025}
-        m_TargetAssemblyTypeName: FMODManager, Assembly-CSharp
         m_MethodName: startGameplay
         m_Mode: 1
         m_Arguments:
@@ -1585,6 +1575,25 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &153768029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153768023}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b9468c5f457ace64f8d4df6d642b107f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  LoadEvent: 1
+  UnloadEvent: 2
+  Banks:
+  - Master
+  - Master.strings
+  CollisionTag: 
+  PreloadSamples: 0
 --- !u!1 &166532218
 GameObject:
   m_ObjectHideFlags: 0
