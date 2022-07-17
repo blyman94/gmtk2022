@@ -28,6 +28,10 @@ public class PatientResultLoader : MonoBehaviour
     }
     private void UpdateDisplay()
     {
+        for (int i = transform.childCount - 1; i >= 0; i--)
+        {
+            Destroy(transform.GetChild(i).gameObject);
+        }
         resultObservers = new List<PatientResultObserver>();
         foreach (Patient patient in daysPatients.Value)
         {

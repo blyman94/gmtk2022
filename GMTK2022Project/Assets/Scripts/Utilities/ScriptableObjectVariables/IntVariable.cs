@@ -21,4 +21,10 @@ public class IntVariable : ScriptableObject
             ValueUpdated?.Invoke();
         }
     }
+
+    public void Increment()
+    {
+        Value += 1;
+        ValueUpdated?.Invoke();
+    }
 }

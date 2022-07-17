@@ -24,13 +24,6 @@ public class BreakroomDisplayParent : MonoBehaviour
         BreakRoomProviders.ValueUpdated -= UpdateDisplay;
     }
 
-
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     private void UpdateDisplay()
     {
         for (int i = 0; i < displays.Count; i++)

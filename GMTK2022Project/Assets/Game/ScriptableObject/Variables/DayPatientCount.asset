@@ -12,4 +12,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2225421dbbf609f42960c823077f321d, type: 3}
   m_Name: DayPatientCount
   m_EditorClassIdentifier: 
-  value: 7
+  value: 3

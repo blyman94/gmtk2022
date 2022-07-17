@@ -23,9 +23,15 @@ public class ActivePatientObserver : MonoBehaviour
     }
     private void Start()
     {
-        activePatient.Value = null;
+        ClearActivePatient();
         UpdateDisplay();
     }
+
+    public void ClearActivePatient()
+    {
+        activePatient.Value = null;
+    }
+
     private void OnDisable()
     {
         activePatient.ValueUpdated -= UpdateDisplay;

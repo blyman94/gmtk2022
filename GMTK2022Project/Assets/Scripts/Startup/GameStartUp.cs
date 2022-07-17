@@ -6,6 +6,7 @@ public class GameStartUp : MonoBehaviour
 {
     [SerializeField] private List<CareProvider> careProviders;
     [SerializeField] private IntVariable PatientDeathCount;
+    [SerializeField] private GameEvent OnStartNewDayEvent;
 
     private void Awake()
     {
@@ -15,5 +16,9 @@ public class GameStartUp : MonoBehaviour
         {
             careProvider.CurrentMorale = careProvider.Role.MaxMorale;
         }
+    }
+    private void Start()
+    {
+        OnStartNewDayEvent.Raise();
     }
 }

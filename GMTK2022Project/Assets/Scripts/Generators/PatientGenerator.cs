@@ -17,8 +17,8 @@ public class PatientGenerator : MonoBehaviour
         patientListToStore = new List<Patient>();
         for (int i = 0; i < patientCount.Value; i++)
         {
-            Patient patient = new Patient("Patient_" + i.ToString(), 
-                GenerateRandomBackground(), 
+            Patient patient = new Patient("Patient_" + i.ToString(),
+                GenerateRandomBackground(),
                 allInjuries[Random.Range(0, allInjuries.Count)]);
             patient.AssignedProviders.Add(nullProvider);
             patient.AssignedProviders.Add(nullProvider);
@@ -36,7 +36,7 @@ public class PatientGenerator : MonoBehaviour
         int age = Random.Range(17, 65);
         int daysUntilDischarge = Random.Range(1, 1825);
 
-        return new PatientBackground(rank, isMarried, childCount, age, 
+        return new PatientBackground(rank, isMarried, childCount, age,
             daysUntilDischarge);
     }
 }
