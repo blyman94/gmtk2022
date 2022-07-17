@@ -42,7 +42,7 @@ public class DayOverProcedure : MonoBehaviour
         {
             toPrintString += "    Name: " + careProvider.Name + "\n";
             toPrintString += "        Prev Morale: " + careProvider.CurrentMorale + "\n";
-            careProvider.UpdateCurrentMorale();
+            //careProvider.UpdateCurrentMorale();
             toPrintString += "        New Morale: " + careProvider.CurrentMorale + "\n";
         }
         Debug.Log(toPrintString);
