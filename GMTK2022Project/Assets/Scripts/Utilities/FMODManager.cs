@@ -30,6 +30,12 @@ public class FMODManager : MonoBehaviour
         TotalMorale.ValueUpdated += UpdateGameplayLayers;
         selectedPatient.ValueUpdated += UpdateInView;
     }
+    
+    private void OnDisable()
+    {
+        TotalMorale.ValueUpdated -= UpdateGameplayLayers;
+        selectedPatient.ValueUpdated -= UpdateInView;
+    }
 
     private void UpdateInView()
     {
@@ -45,14 +51,13 @@ public class FMODManager : MonoBehaviour
 
     private void UpdateGameplayLayers()
     {
-        Debug.Log("Checking");
         float value;
         int val= ((TotalMorale.Value - 2) / 2) - 1;
         index =  val;
-        FMOD.RESULT result = _musicInstance.setParameterByName("Morale Level", index);
-        Debug.Log(result);
-        _musicInstance.getParameterByName("Morale Level",   out value);
-        Debug.Log("FLOAT: " + value.ToString() );
+        
+        
+        FMOD.RESULT result = FMODUnity.RuntimeManager.StudioSystem.setParameterByName("Morale Level", index);
+        FMODUnity.RuntimeManager.StudioSystem.getParameterByName("Morale Level",   out value);
         
     }
 

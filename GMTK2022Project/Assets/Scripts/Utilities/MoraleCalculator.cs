@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,6 +9,7 @@ public class MoraleCalculator : MonoBehaviour
 
  [SerializeField] private IntVariable TotalMorale;
 
+
  public void CalculateTotalMorale()
  {
      int morale = 0;
@@ -16,7 +18,6 @@ public class MoraleCalculator : MonoBehaviour
      {
          morale += provider.CurrentMorale;
      }
-
      TotalMorale.Value = morale;
  }
 }
