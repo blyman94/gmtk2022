@@ -74,7 +74,7 @@ public class PatientResultObserver : MonoBehaviour
         nameText.text = observedPatient.Name.ToUpper();
         prestigeText.text = "PRESTIGE CLASS: " +
             observedPatient.Background.Rank.GetPrestigeGroup().ToString();
-        severityText.text = "SEVERITY: " + observedPatient.Injury.GetInjuryLevel().ToString().ToUpper();
+        severityText.text = "ROLL NEEDED: " + observedPatient.Injury.SurvivalThreshold.ToString();
 
         for (int i = 0; i < observedPatient.AssignedProviders.Count; i++)
         {
