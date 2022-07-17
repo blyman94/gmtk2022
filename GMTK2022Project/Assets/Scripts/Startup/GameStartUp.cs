@@ -22,7 +22,7 @@ public class GameStartUp : MonoBehaviour
         foreach (CareProvider careProvider in careProviders)
         {
             careProvider.CurrentMorale = careProvider.Role.MaxMorale;
-            totalMoral = careProvider.CurrentMorale;
+            totalMoral = careProvider.Role.MaxMorale;
         }
 
         TotalMorale.Value = totalMoral;
